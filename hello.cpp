@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+/*
 int main(){
     //Lecture - 2
     // cout<<"wassup \n"<<"my friend"<<endl;
@@ -243,10 +244,74 @@ int main(){
     //     }
     //     cout<<endl;
     // }
-
-
-
-
-
     return 0;
+}
+*/
+//LECTURE 5 - FUNCTIONS
+// int printH(){
+//     cout<<"Hello World\n";
+//     return 3;
+// }
+// int sum(int a,int b){
+//     int s = a+b;
+//     return s;
+// }
+// int minof2(double a,double b){
+//     return (a>b?b:a);
+// }
+int fact(int a){
+    int fa=1;
+    if (a<0) return -1;
+    else if (a==0 || a==1) return 1; 
+    else{
+        while(a!=1){
+            fa*=a;
+            a--;
+        }
+        return fa;
+    }
+}
+// int sumofDigits(int quo){
+//     int rem,summ=0;
+//     while (quo>0)
+//     { 
+//         rem=quo%10;
+//         quo=quo/10;
+//         summ+=rem;
+//     }
+//     return summ;
+    
+// }
+int binomial_coefficient(int n,int r){
+    //formula = n!/(r! * (n-r)!)
+    int factn,factr,factnr;
+    factn=fact(n);
+    factr=fact(r);
+    factnr=fact(n-r);
+    return factn/(factr * factnr);
+
+}
+int main(){
+    // int a =printH();
+    // cout<<"Value returned is "<<a<<endl;
+    // cout<<printH()<<endl;
+
+    // cout<<"sum of 6 & 7 is "<<sum(6,7)<<endl;
+    // cout<<"min of 6 & 7 is "<<minof2(6,7)<<endl;
+    // cout<<"Enter a number : ";
+    // int f;
+    // cin>>f;
+    // cout<<"Factorial of "<<f<<" is: "<<fact(f);
+    // cout<<"Enter A number: ";
+    // int x;
+    // cin>>x;
+    // cout<<"Sum of number of "<<x<<" is: "<<sumofDigits(x);
+    int n,r;
+    cout<<"--- To calulate nCr binomial coefficient ---"<<endl;
+    cout<<"Enter value for n: ";
+    cin>>n;
+    cout<<"Enter value for r: ";
+    cin>>r;
+    cout<<"nCr is: "<<binomial_coefficient(n,r);
+
 }
