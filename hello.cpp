@@ -1,4 +1,6 @@
 #include<iostream>
+#include<vector>
+//#include<bits/c++,h> alternate for vector (use vector only )
 using namespace std;
 /*
 int main(){
@@ -291,6 +293,14 @@ int binomial_coefficient(int n,int r){
     return factn/(factr * factnr);
 
 }
+//LECTURE 9 - VECTORS
+//vector functions: size, capacity,push_back(add ele in last index), pop_back, front, back, at
+//at takes index value, vec[i] == vec.at(i) 
+//vector dynamically allocates, like agar size 0 hai vector ka and we push 1 element toh vo ek space genrate krega, now abhi aur ek push kiya toh abhi vector ki size 1 hai toh uska x2 krega i.e 2 therefore size hogayi 2, now me aur ek push krta hu ele , toh abhi last size hai 2 toh 2x2 = 4, now vec use krrha hai 3 but capicty hai 4
+//vector size-> no of ele, vector capacity -> no of space
+//also dont leetcode no 136 single number using vector and bitwise
+
+
 int main(){
     // int a =printH();
     // cout<<"Value returned is "<<a<<endl;
@@ -306,12 +316,34 @@ int main(){
     // int x;
     // cin>>x;
     // cout<<"Sum of number of "<<x<<" is: "<<sumofDigits(x);
-    int n,r;
-    cout<<"--- To calulate nCr binomial coefficient ---"<<endl;
-    cout<<"Enter value for n: ";
-    cin>>n;
-    cout<<"Enter value for r: ";
-    cin>>r;
-    cout<<"nCr is: "<<binomial_coefficient(n,r);
+    // int n,r;
+    // cout<<"--- To calulate nCr binomial coefficient ---"<<endl;
+    // cout<<"Enter value for n: ";
+    // cin>>n;
+    // cout<<"Enter value for r: ";
+    // cin>>r;
+    // cout<<"nCr is: "<<binomial_coefficient(n,r);
 
+    //vectors
+    // vector<int> vec={1,2,3}; //vectors store same as array  
+    // cout<<vec[0]<<endl;
+    // //vector<int> vec(3,0); 
+    // cout<<"sizze: "<<vec.size()<<endl;
+    // for (int val : vec){ //for each loop, here val is the value not the index 
+    //     cout<<val<<endl;
+
+    // }
+    vector<int> vec;
+    cout<<"size before: "<<vec.size()<<endl;
+    vec.push_back(67);
+    vec.push_back(81);
+    vec.push_back(69);
+    cout<<"size after push_back: "<<vec.size()<<endl;
+    vec.pop_back();
+    cout<<"size after pop_back: "<<vec.size()<<endl;
+    cout<<"vec.front(): "<<vec.front()<<endl;
+    cout<<"vec.back(): "<<vec.back()<<endl;
+    cout<<"vec.at(0): "<<vec.at(0)<<endl;
+    
+    return 0;
 }
